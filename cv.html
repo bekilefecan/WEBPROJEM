@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özgeçmiş</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Kendi stil dosyam -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Web Projem</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Benim Sitem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="hakkinda.html">Hakkında</a></li>
-            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-            <li class="nav-item"><a class="nav-link" href="mirasim.html">Mirasım</a></li>
-            <li class="nav-item"><a class="nav-link" href="ilgi-alanlari.html">İlgi Alanları</a></li>
-            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+      </ul>
     </div>
+
+    <div class="d-flex ms-auto">
+      <a href="login.html" class="btn btn-outline-light me-2">Giriş Yap</a>
+      <a href="register.html" class="btn btn-light">Kayıt Ol</a>
+    </div>
+  </div>
 </nav>
+
+  <!-- ÖZGEÇMİŞ -->
+  <main class="container mt-5">
+    <header class="mb-4">
+        <div class="text-center">
+            <img src="img/profil.jpg" alt="Profil Resmi" class="rounded-circle img-thumbnail" width="150">
+          </div>
+          
+      <h1 class="text-center">Efe Can BEKİL</h1>
+      <p class="text-center">Web Geliştirici | Öğrenci | Sporcu | </p>
+    </header>
+
+    <section>
+      <h3>Eğitim</h3>
+      <ul>
+        <li><strong>Sakarya Üniversitesi</strong> - Bilgisayar Mühendisliği (2024 - 2028)</li>
+        <li><strong>Nursel Çağlar Anadolu Lisesi</strong> - Mezuniyet:(2018-2022)</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Beceriler</h3>
+      <ul>
+        <li>Doğru ve Etkili İletişim Becerileri</li>
+        <li>Ekip Çalışmalarında Liderlik Becerim Yüksek</li>
+        <li>C# , C++ ve Javascript Kodlama Becerim İyi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Deneyim</h3>
+      <ul>
+        <li>Tatil Sitesi Yönetimi Uygulaması </li>
+        <li>Kendime Ait Web Sayfası</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Sertifikalar</h3>
+      <ul>
+        <li>IELTS B2 İngilizce Sertifikası</li>
+        <li>Bilgisayar Programcılığı Yetkinlik Sertifikası</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

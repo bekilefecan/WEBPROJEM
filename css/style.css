@@ -1,0 +1,68 @@
+/* Genel yazı tipi ve arka plan */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: hsl(0, 0%, 96%);
+  color: #111;
+  font-weight: 600;
+}
+
+/* Başlık stilleri */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Görsellere genel gölge */
+img {
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Spor resimleri için özel boyut ve stil */
+.spor-resim {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+body {
+  background-color: #f2f6fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #28a745;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.miras-resim {
+  width: 100%;
+  max-width: 600px; 
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+
+
