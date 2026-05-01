@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirasımız - Kars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Web Projem</a>
-
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="hakkinda.html">Hakkında</a></li>
-            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-            <li class="nav-item"><a class="nav-link" href="mirasim.html">Mirasım</a></li>
-            <li class="nav-item"><a class="nav-link" href="ilgi-alanlari.html">İlgi Alanları</a></li>
-            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Benim Sitem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link active" href="mirasimiz.html">Mirasımız</a></li>
         </ul>
+      </div>
+      <div class="d-flex ms-auto">
+        <a href="login.html" class="btn btn-outline-light me-2">Giriş Yap</a>
+        <a href="register.html" class="btn btn-light">Kayıt Ol</a>
+      </div>
     </div>
-</nav>
+  </nav>
+
+  <!-- İçerik -->
+  <div class="container mt-5">
+    <h1 class="text-center">Doğunun İncisi : Kars</h1>
+    <p class="lead text-center">Tarih ve kültürün buluştuğu Anadolu'nun doğusundaki eşsiz şehir.</p>
+
+    <section class="mt-4">
+  <h3>Ani Harabeleri</h3>
+  <p>
+    UNESCO Dünya Mirası Listesi’nde yer alan Ani Harabeleri, Kars'ın simgesi haline gelmiş tarihi bir bölgedir.
+    1000 yıl öncesine dayanan bu kalıntılar, Ermeni, Gürcü ve Selçuklu mimarisinin izlerini taşır.
+  </p>
+   <img src="img/ani.jpg" alt="Ani Harabeleri" class="miras-resim">
+</section>
+
+
+    <section class="mt-4">
+  <h3>Taş Binalar ve Baltık Mimarisi</h3>
+  <p>
+    Kars şehir merkezi, Baltık mimarisiyle inşa edilmiş taş binalarıyla dikkat çeker. Bu yapılar, Rus işgali döneminden kalmadır
+    ve Türkiye’de başka örneği olmayan bir mimari tarza sahiptir.
+  </p>
+  <img src="img/baltik.jpg" alt="Baltık Mimarisi" class="miras-resim">
+</section>
+
+
+    <section class="mt-4">
+  <h3>Sarıkamış ve Doğal Güzellikler</h3>
+  <p>
+    Kars, sadece tarihiyle değil; Sarıkamış Kayak Merkezi gibi doğal güzellikleriyle de öne çıkar. Kristal kar yapısı sayesinde
+    kayak turizmi açısından çok önemli bir noktadır.
+  </p>
+  <img src="img/sarikamis.jpg" alt="Sarıkamış Kayak Merkezi" class="miras-resim">
+</section>
+
+    <section class="mt-4">
+  <h3>Kars Peynir Kültürü</h3>
+  <p>
+    Kars, gravyer ve kaşar peyniri üretimi ile meşhurdur. Yüzyıllardır süregelen bu peynir kültürü, Kars’ı gastronomik anlamda
+    da özel bir şehir haline getirmiştir.
+  </p>
+  <img src="img/peynir.jpg" alt="Kars Gravyer ve Kaşar Peyniri" class="miras-resim">
+</section>
+
+<section class="mt-4">
+  <h3>Kars Kalesi</h3>
+  <p>
+    Kars Kalesi, 12. yüzyılda Saltuklu Hükümdarı Melik İzzeddin tarafından yaptırılmıştır. Kale, şehrin yüksek bir noktasında
+    yer alır ve Kars manzarasına hâkimdir. Tarihi boyunca birçok kez onarılmış ve savunma amacıyla kullanılmıştır.
+    Günümüzde Kars'ın en önemli simgelerinden biri olarak ziyaretçilerini ağırlamaktadır.
+  </p>
+   <img src="img/karskalesi.jpg" alt="Kars Kalesi" class="miras-resim">
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
