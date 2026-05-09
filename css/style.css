@@ -64,5 +64,19 @@ body {
   display: block;
 }
 
+/* Inline stillerden taşınan sınıflar */
+.api-gorsel {
+  max-width: 300px;
+}
 
+.tiklanabilir-slider-resim {
+  cursor: pointer;
+}
 
+.harita-iframe {
+  border: 0;
+}
+
+.hata-mesaji {
+  color: red;
+}

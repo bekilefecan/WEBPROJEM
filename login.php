@@ -11,16 +11,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Geçerli e-posta mı?
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/@sakarya\.edu\.tr$/', $email)) {
-        echo "<h2 style='color:red;'>❌ Geçersiz e-posta formatı!</h2>";
+        echo "<h2 class='hata-mesaji'>❌ Geçersiz e-posta formatı!</h2>";
         echo "<a href='login.html'>Geri dön</a>";
         exit();
     }
 
-    // E-posta adresinden kullanıcı adı çıkar
-    $kullaniciAdi = explode("@", $email)[0];
+    // kullanicilar.txt dosyasından doğrulama
+    $dosya_yolu = __DIR__ . "/kullanicilar.txt";
+    $giris_basarili = false;
+    $kullaniciAdi = explode("@", $email)[0]; // Varsayılan değer
 
-    // Doğru şifre kullanıcı adının kendisi olacak (örnek: b2412100001)
-    if ($sifre === $kullaniciAdi) {
+    if (file_exists($dosya_yolu)) {
+        $satirlar = file($dosya_yolu, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($satirlar as $satir) {
+            // register.php'deki kayıt formatı: "$ad $soyad - $email - $sifre"
+            $bilgiler = explode(" - ", $satir);
+            if (count($bilgiler) >= 3) {
+                $kayitli_email = trim($bilgiler[1]);
+                $kayitli_sifre = trim($bilgiler[2]);
+                
+                if ($kayitli_email === $email && $kayitli_sifre === $sifre) {
+                    $giris_basarili = true;
+                    $kullaniciAdi = trim($bilgiler[0]); // Dosyadaki Ad Soyad'ı al
+                    break;
+                }
+            }
+        }
+    }
+
+    if ($giris_basarili) {
         echo "
         <!DOCTYPE html>
         <html lang='tr'>

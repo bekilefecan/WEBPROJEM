@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İlgi Alanlarım - API</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -75,7 +76,7 @@
       const meal = data.meals[0];
       document.getElementById('yemek').innerHTML = `
         <h5>${meal.strMeal}</h5>
-        <img src="${meal.strMealThumb}" class="img-fluid rounded mb-2" style="max-width: 300px;">
+        <img src="${meal.strMealThumb}" class="img-fluid rounded mb-2 api-gorsel">
         <p>Bu yemek, dünya mutfağından özenle seçilmiştir. Lezzetiyle sofraları süsler ve damaklarda iz bırakır.</p>
       `;
     });
@@ -87,7 +88,7 @@
       const film = data.results[0];
       document.getElementById('havacilik').innerHTML = `
         <h5>${film.title} (${film.release_date.substring(0, 4)})</h5>
-        <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" class="img-fluid rounded mb-2" style="max-width:300px;">
+        <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" class="img-fluid rounded mb-2 api-gorsel">
         <p>${film.overview}</p>
       `;
     });
@@ -99,7 +100,7 @@
     const haber = data.articles[0];
     document.getElementById('araba').innerHTML = `
       <h5>${haber.title}</h5>
-      <img src="${haber.urlToImage}" class="img-fluid rounded mb-2" style="max-width: 300px;">
+      <img src="${haber.urlToImage}" class="img-fluid rounded mb-2 api-gorsel">
       <p>${haber.description}</p>
       <a href="${haber.url}" target="_blank">Haberi Oku</a>
     `;

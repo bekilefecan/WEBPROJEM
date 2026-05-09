@@ -5,10 +5,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST["email"]);
     $sifre = htmlspecialchars($_POST["sifre"]);
 
+    // Okul numarasını (e-postadaki @ işaretinden öncesi) al
+    $okul_no = explode("@", $email)[0];
+
     // E-posta uzantısı kontrolü
     if (!preg_match("/@sakarya\.edu\.tr$/", $email)) {
         $mesaj = "<h2 class='text-danger'>❌ Geçersiz E-posta!</h2>
                   <p>Lütfen sadece <strong>@sakarya.edu.tr</strong> uzantılı bir e-posta adresi girin.</p>
+                  <a href='register.html' class='btn btn-warning mt-3'>Geri Dön</a>";
+    } elseif ($sifre !== $okul_no) {
+        $mesaj = "<h2 class='text-danger'>❌ Geçersiz Şifre!</h2>
+                  <p>Şifre sadece okul numarası olmalıdır.</p>
                   <a href='register.html' class='btn btn-warning mt-3'>Geri Dön</a>";
     } else {
         $satir = "$ad $soyad - $email - $sifre\n";
